@@ -25,7 +25,7 @@ int main(void)
     char oper;
     do 
     {
-        printf("\n BANKING OPERATIONS\n 1] Deposit\n 2] Withdrawal\n 3] Check Balance\n 4] Guidelines\n 5] Exit\n\n");
+        printf("\n\n BANKING OPERATIONS\n 1] Deposit\n 2] Withdrawal\n 3] Check Balance\n 4] Guidelines\n 5] Exit\n\n");
         printf("Operation :");
         int operation;
         scanf("%i", &operation);
@@ -52,7 +52,7 @@ int main(void)
             
             case 3:
                 printf("---------Balance---------\n");
-                printf("Balance: %i", balance);
+                printf("Balance: %i\n", balance);
                 printf("---------Balance---------\n");
                 break;
 
@@ -68,8 +68,8 @@ int main(void)
             default:
                 break;
         }
-        printf("Do You Want to continue Y/N :");
-        scanf("%c", &oper);
+        printf("\nDo You Want to continue Y/N :");
+        scanf(" %c", &oper);
     }
     while(oper == 'Y');
 }
