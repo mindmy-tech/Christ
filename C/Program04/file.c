@@ -41,7 +41,6 @@ int main(void)
                 break;
             
             case 2:
-
                 printf("---------Withdraw---------\nEnter Amount: ");
                 int debit_amount;
                 scanf("%i", &debit_amount);
