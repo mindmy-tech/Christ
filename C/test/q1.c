@@ -12,15 +12,13 @@ int main(void)
         printf("Age :");
         scanf("%i", &age);
 
-        char dob[10];
-        printf("\nDOB :");
-        scanf("%s", &dob);
+        int dob[10];
+        printf("YOB :");
+        scanf("%i", &dob);
 
         char address[1000];
         printf("Address :");
         scanf("%s", &address);
-
-        getchar();
         if (age >= 18 )
         {
             // vaccination details
