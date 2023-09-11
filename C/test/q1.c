@@ -26,15 +26,11 @@ int main(void)
             printf("\nDid You take covid vaccination [y/n] :");
             scanf("%c", &dose_);
 
-            getchar();
-
             if (dose_ == 'y')
             {
                 int no_doses;
                 printf("\nNo of doses taken :");
                 scanf("%i", &no_doses);
-
-                getchar();
 
                 switch (no_doses)
                 {
