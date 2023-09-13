@@ -3,46 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>Eye-Following Character</title>
 </head>
-<body>
-
-
-    <script>
-
-        var img = document.getElementById("img-id");
-
-        addEventListener('')
-    </script>
-</body>
-</html>
-
-
-<!DOCTYPE html>
-<html>
-<body>
-<h1>Mouse Events</h1>
-<h2>The clientX and clientY Properties</h2>
-
-<div style="border: 1px solid black;padding:8px; width: fit-content;" onmousemove="showCoords(event)" onmouseout="clearCoor()">
-
-    <img id="img-id" src="./bg-images.jpg" alt="">
-</div>
-
-<p id="demo"></p>
-
-<script>
-function showCoords(event) {
-  let x = event.clientX;
-  let y = event.clientY;
-  let text = "X coords: " + x + ", Y coords: " + y;
-  document.getElementById("demo").innerHTML = text;
-}
-
-function clearCoor() {
-  document.getElementById("demo").innerHTML = "";
-}
-</script>
-
+<body bgcolor="#232323">
+    <div class="character">
+        <div class="eye" id="left-eye">⚫</div>
+        <div class="eye" id="right-eye">⚫</div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>

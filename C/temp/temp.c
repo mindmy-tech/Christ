@@ -3,11 +3,16 @@
 
 int main(void)
 {
-    char first_name[]= "Hello";
-    char last_name [] = ", World";
-    printf("the size of first_name is :%i\n", sizeof(first_name));
-    strcat(first_name, last_name);
-
-    printf("Full name : %s\n", first_name);
-    printf("now size of first_name is :%i\n", sizeof(first_name));
+    char reg[10];
+    char blocked_reg[] = "2340190";
+    printf("enter reg no:");
+    scanf("%s", &reg);
+    if (strcmp(reg, blocked_reg))
+    {
+        printf("Not blocked ");
+    }
+    else
+    {
+        printf("blocked ");
+    }
 }
