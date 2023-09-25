@@ -28,7 +28,7 @@ bool isPrime(int n1)
     {
         if (n1 == 0 || n1 == 1)
         {
-            return false;
+            break;
         }
 
         else if (n1 == i)
@@ -38,7 +38,7 @@ bool isPrime(int n1)
 
         else if (n1 % i == 0)
         {
-            return false;
+            break;
         }
         else 
         {
@@ -46,4 +46,5 @@ bool isPrime(int n1)
         }
 
     }
+    return false;
 }
