@@ -18,7 +18,7 @@ int main(void)
             continue;
         }
     }
-    printf("%i",FLAGS);
+    printf("There are Totally %i Prime numbers in the interval [%i,%i]\n",FLAGS,n1,n2);
 }
 
 bool isPrime(int n1)
