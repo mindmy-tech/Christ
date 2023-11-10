@@ -1,0 +1,227 @@
+* {
+    padding: 0%;
+    margin: 0%;
+}
+body {
+    background-color: #232323;
+    font-size: 16px;
+}
+
+:root {
+    --size-main-Q: 8em;
+    --size-name-title: 4.6em;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    height: 100vh; 
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory; 
+  }
+.landing-page, .page-2 {
+      height: 100%; 
+  scroll-snap-align: start;
+}
+
+
+/* Landing page  */
+.landing-page {
+    width: 100%;
+    height: 100vh;
+}
+
+/* 80% design */
+.design-85 {
+    width: 100%;
+    height: 85vh;
+    background-color: #2BB94A;
+    position: relative;
+}
+
+.name-title {
+    font-size: var(--size-name-title);
+    top: 0;
+}
+.main-Q {
+    font-size: var(--size-main-Q);
+    bottom: 0;
+}
+
+.name-title, .main-Q {
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+
+
+/* Page 2 */
+
+.page-2 {
+    height: 100vh;
+    width: 100%;
+}
+
+/* Nav bar */
+.nav-pc {
+    background-color: rgba(43, 48, 43, 0.50);;
+    width: 100%;
+    display: flex;
+}
+
+.nav-pc > .nav-item {
+    color: #2BB94A;
+    flex: 1;
+    text-align: center;
+    font-size: 4em;
+    padding: .4em;
+}
+
+/* content container */
+.content-container {
+    margin-top: 5vh;
+    display: flex;
+    width: 100%;
+    height: 75vh;
+    position: relative;
+}
+
+
+.image-design {
+    /* background-color: yellowgreen; */
+    width: 100%;
+    flex: 1;
+
+}
+
+.socials {
+    /* background-color: bisque; */
+    width:100%;
+    flex: 1 1 400px;
+}
+
+.svg-vector-btm {
+    position: absolute;
+    bottom:60px;
+    left: 350px;
+}
+.profile-img {
+    position: absolute;
+    width: 450px;
+    height: 600px;
+    left: 100px;
+    top: 50px;
+    background-color: #2BB94A;
+    border-radius: 30px;
+}
+.svg-vector-top {
+    position: absolute;
+    top: 0;
+    left: -50px;
+}
+
+
+.social-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end; 
+    padding: 10px;
+    padding-right: 40px;
+  }
+
+/* Changes needed  */
+.name-large {
+    color: #FFF;
+    font-size: 8rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    
+}
+
+.potential {
+    padding-top: 30px ;
+    padding-right: 10px;
+
+    color: #FFF;
+    text-align: right;
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+
+.dream {
+    display: flex;
+    flex-direction: row;
+} 
+
+.dream-item, .bar {
+    padding: 0 20px;
+    color: #FFF;
+    text-align: right;
+    font-size: 2.25rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin-top: 20px;
+    opacity: 0.5;
+    transition: opacity .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.current-persu {
+    padding-top: 50px;
+    color: #FFF;
+    text-align: right;
+    font-size: 2.25rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+.current-edu {
+    text-align: right; 
+    padding-top: 10px;
+}
+
+.studies {
+    margin-top: 10px;
+
+}
+
+
+.studies-tag {
+    color: #FFF;
+    text-align: right;
+    font-size: 2.25rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    opacity: 0.5;
+    transition: opacity .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+
+.typing-effect {
+    font-family: monospace  ;
+}
+
+h1, h2, a {
+    font-family: monospace  ;
+}
+
+.dream-item:hover , .studies-tag:hover {
+    /* background-color: #25ff54; */
+    border-radius: 12px;
+    opacity: 1;
+
+}
+
+.quotes {
+    background-color: linear-gradient(to right, #00FF00, #00CC00, #009900);
+    font-size: 64px;
+    margin-top: 50px;
+    margin-right: 300px;
+}
