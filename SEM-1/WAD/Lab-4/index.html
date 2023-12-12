@@ -105,9 +105,21 @@
             </table>
         </div>
 
+        <form id="frm" action="">
+            Name : <input type="text">
+            Age : <input type="text">
+            <input type="submit">
+
+        </form>
+
         <a href="https://developer.mozilla.org/en-US/">Learn More</a>
     </div>
 
 </body>
+<script>
+    document.getElementById('frm').onsubmit() = () => {
+    alert("Submitted!");
+}
+</script>
 
 </html>
