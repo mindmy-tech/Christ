@@ -1,18 +1,32 @@
 #include <stdio.h>
 
 
+int search(int arr[], int target);
+
 int main(void)
 {
     int array[] = { 1,6,3,5,8,2};
     int target = 2;
-    int len_arr = sizeof(array)/sizeof(int);
+    int target_index = search(array, target);
+    if (target_index < 0)
+    {
+        printf("Element Not FOUND !!\n");
+        return 0;
+    }
+    printf("Element Found at INDEX %i\n", target_index);
+    return 0;
+}
+
+
+int search(int arr[], int target)
+{
+    int len_arr = sizeof(arr)/sizeof(int);
     for (int i = 0; i < len_arr; i++ )
     {
-        if (array[i] == target)
+        if (arr[i] == target)
         {
-            printf("Element Found at INDEX %i\n", i);
-            return 0;
+            return i;
         }
     }
-    printf("Element Not FOUND !!\n");
+    return -1;
 }
