@@ -9,7 +9,7 @@ int main(void) {
     do {
         n++;
         police = n * 23;
-        theif = factorial(n);// factorial
+        theif = factorial(n);
     }
     while(!(police == theif));
     printf("Days :%i", n);
