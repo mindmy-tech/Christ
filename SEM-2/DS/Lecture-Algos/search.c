@@ -1,13 +1,14 @@
 #include <stdio.h>
 
 
-int search(int arr[], int target);
+int search(int arr[], int target, int len_arr);
 
 int main(void)
 {
     int array[] = { 1,6,3,5,8,2};
     int target = 2;
-    int target_index = search(array, target);
+    int len_arr = sizeof(array)/sizeof(int);
+    int target_index = search(array, target, len_arr);
     if (target_index < 0)
     {
         printf("Element Not FOUND !!\n");
@@ -18,9 +19,8 @@ int main(void)
 }
 
 
-int search(int arr[], int target)
+int search(int arr[], int target, int len_arr)
 {
-    int len_arr = sizeof(arr)/sizeof(int);
     for (int i = 0; i < len_arr; i++ )
     {
         if (arr[i] == target)
