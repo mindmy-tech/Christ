@@ -5,7 +5,9 @@ int main(void)
     int array[] = {2, 4,5,7,8,9,10,55};
     int len_array = sizeof(array) / sizeof(int);
     
-    int target = 2;
+    int target;
+    printf("Targer num:");
+    scanf("%i", &target);
     int start_index= 0;
     int end_index = len_array - 1;
     int mid_index = 0;

@@ -7,13 +7,16 @@ void search(int arr[], int target, int len_arr);
 
 int main(void)
 {
-    int target = 3;
-    int array[] = { 1,6,3,5,8,2, target};
-    int len_arr = sizeof(array)/sizeof(int);
+    int target ;
+    printf("target : ");
+    scanf("%i", &target);
+    int array[] = { 1,6,5,8,2, target};
+    int len_arr = sizeof(array)/sizeof(int) -1;
     int starting_index = 0;
     int target_index = search_sen(array, target, len_arr, starting_index);
 
     search(array, target, len_arr);
+    
     return 0;
 }
 
