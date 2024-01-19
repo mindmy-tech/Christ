@@ -10,7 +10,7 @@ int main(void)
     scanf("%i",&n2);
 
     int FLAGS = 0;
-    for (int i = n1; i < n2; i++)
+    for (int i = n1; i < n2; i++) 
     {
         if (isPrime(i))
         {

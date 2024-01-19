@@ -26,6 +26,7 @@ F_x_func = sp.lambdify(x, F_x, 'numpy')
 
 # Generate data for the plots
 x_vals = np.linspace(-5, 5, 100)
+print(x_vals)
 y_vals = f_x_func(x_vals)
 y_prime_vals = f_prime_x_func(x_vals)
 Y_vals = F_x_func(x_vals)
