@@ -9,8 +9,8 @@ struct stack
 };
 
 
-void Push(int element);
-void Pop(void);
+void insert(int element);
+void delete(void);
 void Display();
 
 struct stack S;
@@ -20,7 +20,6 @@ int main(void)
     S.last_index = -1;
     do
     {
-        /* code */
 
         printf("1] Push\n2] Pop\n3] Display\n4] Exit\n");
         int opt;
@@ -33,12 +32,12 @@ int main(void)
             printf("Pushing\n");
             printf("value to insert: ");
             scanf("%i", &element_val);
-            Push(element_val);
+            insert(element_val);
             break;
         case 2:
             /* code */
             printf("poping\n");
-            Pop();
+            delete();
             break;
         case 3:
             /* code */
@@ -59,7 +58,7 @@ int main(void)
     
 }
 
-void Push(int element)
+void insert(int element)
 {
     if (S.last_index == MAX -1 )
     {
@@ -72,7 +71,7 @@ void Push(int element)
     }
 }
  
-void Pop(void)
+void delete(void)
 {
     if (S.last_index == -1)
     {

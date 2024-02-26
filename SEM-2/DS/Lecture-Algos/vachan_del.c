@@ -2,7 +2,7 @@
  
 void del(int a[], int high,int pos,int num);
 
-int main ()  
+int main ()
 {  
     int a[50];  
     int pos, i, num;

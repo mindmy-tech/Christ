@@ -1,52 +1,45 @@
 #include <stdio.h>
 
-void insert(int arr[], int arr_size, int insert_index, int insert_value);
+int n;
 
-int main(void)
+int insert(int a[], int high, int pos, int element);
+
+int main()
 {
-    int arr_size;
-    int insert_index;
-    int start_index, last_index, insert_value;
-    printf("Enter the size of array: ");
-    scanf("%i", &arr_size);
-
-    // last_index = arr_size ;
-    int arr[arr_size+5];
-
-    for (int i = 0; i < arr_size; i++)
+    int a[100], pos, element, i;
+    printf("Enter no. of elements: ");
+    scanf("%d", &n);
+    for (i = 0; i < n; i++)
     {
-        printf("Enter element [%i] :", i);
-        scanf("%i", &arr[i]);
+        scanf("%d", &a[i]);
     }
-
-    printf("Enter the element index which u wanna insert:");
-    scanf("%i", &insert_index);
-
-    printf("Enter Insert Value:");
-    scanf("%i", &insert_value);
-
-    insert(arr, arr_size, insert_index, insert_value);
+    printf("\n Enter the element to be inserted: ");
+    scanf("%d", &element);
+    printf("\n Enter the position to insert the element: ");
+    scanf("%d", &pos);
+    if (pos >= 0 && pos <= n && n < 100) {
+        n = insert(a, n, pos, element);
+    } else {
+        printf("Invalid position or array is full!\n");
+        return 1;
+    }
+    for (i = 0; i < n; i++)
+    {
+        printf("\n %d", a[i]);
+    }
+    return 0;
 }
 
-void insert(int arr[], int arr_size, int insert_index, int insert_value)
+int insert(int a[], int high, int pos, int element)
 {
-    int last_index = arr_size;
-    if (insert_index > arr_size)
-    {
-        printf("Not possible\n");
+    int i;
+    if (high >= 100) { 
+        return high; 
     }
-
-    else 
+    for (i = high; i >= pos; i--)
     {
-        for(int j = last_index; j >= insert_index ; j-- )
-        {
-            arr[j+1] = arr[j];
-        }
-        last_index++;
-        arr[insert_index] = insert_value; 
-        for (int i = 0; i < last_index; i++)
-        {
-            printf("[%i] %i\n", i, arr[i]);
-        }
+        a[i + 1] = a[i];
     }
+    a[pos] = element;
+    return high + 1;
 }

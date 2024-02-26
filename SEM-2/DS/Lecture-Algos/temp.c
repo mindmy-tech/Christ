@@ -1,46 +1,44 @@
-#include <stdio.h>
+#include<stdio.h>
 
-int main(void)
-{
-    int arr_size;
-    int delete_target;
-    int start_index, last_index;
-    printf("Enter the size of array: ");
-    scanf("%i", &arr_size);
+void insert(int a[], int high, int pos, int element, int n);
 
-    last_index = arr_size-1;
-    int arr[arr_size];
+int main() {
+    int i, n;
 
-    for (int i = 0; i < arr_size; i++)
-    {
-        printf("Enter element [%i] :", i);
-        scanf("%i", &arr[i]);
+    printf("Enter the number of elements: ");
+    scanf("%d", &n);
+
+    int a[n];
+
+    for (i = 0; i < n; i++) {
+        printf("Enter the element %d: ", i);
+        scanf("%d", &a[i]);
     }
 
-    printf("Enter the element to check for duplicates delete it:");
-    scanf("%i", &delete_target);
+    int element, pos;
+    printf("Enter the element to be inserted: ");
+    scanf("%d", &element);
 
-    int cnt = 0;
+    printf("Enter the position: ");
+    scanf("%d", &pos);
 
-    for (int i = 0; i < arr_size; i++)
-    {
-        if (arr[i] ==  delete_target)
-        {
-            cnt++;
-            if (cnt > 1)
-            {
-                for(int j =  i; j <= last_index; j++)
-                {
-                    arr[j] = arr[j+1];
-                }
-                last_index--;
-            }
-        }
+    insert(a, n - 1, pos, element, n);
 
-
+    
+    for (i = 0; i < n + 1; i++) {
+        printf("%d ", a[i]);
     }
-    for (int i = 0; i < last_index; i++)
-    {
-        printf("[%i] %i\n", i, arr[i]);
+
+    return 0;
+}
+
+void insert(int a[], int high, int pos, int element, int n) {
+    int i;
+
+    for (i = high; i >= pos; i--) {
+        a[i + 1] = a[i];
     }
+
+    a[pos] = element;
+    n = n + 1;
 }

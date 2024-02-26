@@ -8,10 +8,8 @@ x = sp.symbols('x')
 # Define the quadratic function: f(x) = x^2
 f_x = x**2
 
-# Compute the derivative of the function
 f_prime_x = sp.diff(f_x, x)
 
-# Compute the integral of the function
 F_x = sp.integrate(f_x, x)
 
 # Display the results
