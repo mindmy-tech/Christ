@@ -33,6 +33,9 @@ int main(void)
             push(element);
             break;
         case  2:
+            // If Stack
+            // printf("\n Element deleted : %i \n", pop());
+            // If Queue
             printf("\n Element deleted : %i \n", dequeue());
             break;
         case  3:
@@ -81,6 +84,7 @@ int pop()
     return data;
 }
 
+// For Queue
 int dequeue()
 {
     if (ptr == NULL)
