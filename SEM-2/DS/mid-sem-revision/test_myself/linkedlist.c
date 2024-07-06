@@ -3,10 +3,10 @@
 
 // Stack structure
 
-typedef struct Node
+typedef struct node
 {
     int data;
-    struct Node *prev;
+    struct node *prev;
 } node;
 
 node *ptr = NULL;
@@ -33,9 +33,6 @@ int main(void)
             push(element);
             break;
         case  2:
-            // If Stack
-            // printf("\n Element deleted : %i \n", pop());
-            // If Queue
             printf("\n Element deleted : %i \n", dequeue());
             break;
         case  3:

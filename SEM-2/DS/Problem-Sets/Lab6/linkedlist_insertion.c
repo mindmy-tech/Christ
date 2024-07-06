@@ -17,7 +17,7 @@ int main(void)
     char continue_loop = 'y';
     do
     {
-        printf("1] enqueue\n2] Display\n3] Exit\n");
+        printf("1] insert\n2] Display\n3] Exit\n");
         int opt;
         printf("Enter opt:");
         scanf("%i", &opt);

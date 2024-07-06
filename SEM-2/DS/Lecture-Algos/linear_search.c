@@ -17,7 +17,7 @@ int main()
         scanf("%d", &arr[i]);
     }
 
-    // Target value that has to be searched
+    // Target value that has to be searche
     printf("Enter the element that has to be searched: ");
     scanf("%d", &key);
 
